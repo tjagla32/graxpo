@@ -1,0 +1,19 @@
+{
+  "name": "graxpo",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^3.0.0",
+    "font-awesome": "^4.6.3"
+  }
+}
