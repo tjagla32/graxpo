@@ -32,9 +32,9 @@ gulp.task('index', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('scss/**/*.scss', ['sass']);
+	  gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('scss/**/*.sass', ['sass']);
-	gulp.watch('js/scripts/script.js', ['scripts']);
+	  gulp.watch('js/scripts/script.js', ['scripts']);
     gulp.watch('index.html', ['index']);
 });
 
