@@ -1,0 +1,50 @@
+.navbar-default {
+    background-color: transparent;
+    border: 0px solid #000;
+
+    .navbar-brand {                                /* title - brand */
+        border: 0px solid #000;
+        color: $base-color;
+        font-family: 'LeckerliOne';
+        font-size: 28px;
+        @include transition(.2s);
+        &:hover, &:focus{
+            color: darken($base-color, 10%);
+        }
+    }
+
+    .navbar-nav{                                    /* link */
+        li{
+            a{
+                font-family: 'OpenSans';
+                font-size: 15px;
+                color: #333b46;
+                font-weight: bold;
+                @include transition(.15s);
+                &:hover, &:focus{
+                    color: $base-color;
+                }
+            }
+        }
+        .active{
+            color: $base-color;
+            @include transition(.15s);
+            &:hover, &:focus{
+                color: #333b46;
+            }
+        }
+    }
+}//.navbar-default
+
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: $base-color;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: rgba(0,0,0, 0.1);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: $base-color;
+}
+//////////////////zmienić czcionki kurwa na 14 px przy sm

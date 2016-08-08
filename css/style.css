@@ -11249,3 +11249,98 @@ button.close {
 /**************************************
 ***************main.scss***************
 **************************************/
+
+@font-face {
+  font-family: 'LeckerliOne';
+  src: url("../bower_components/../fonts/LeckerliOne-Regular.otf");
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../bower_components/../fonts/OpenSans-Regular.ttf");
+}
+
+* {
+  text-transform: uppercase;
+}
+
+p {
+  text-transform: none;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: 0px solid #000;
+}
+
+.navbar-default .navbar-brand {
+  /* title - brand */
+  border: 0px solid #000;
+  color: #e84c3d;
+  font-family: 'LeckerliOne';
+  font-size: 28px;
+  -webkit-transition: all 0.2s ease-in-out 0.05s;
+  -moz-transition: all 0.2s ease-in-out 0.05s;
+  -o-transition: all 0.2s ease-in-out 0.05s;
+  -ms-transition: all 0.2s ease-in-out 0.05s;
+  transition: all 0.2s ease-in-out 0.05s;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #d82a1a;
+}
+
+.navbar-default .navbar-nav {
+  /* link */
+}
+
+.navbar-default .navbar-nav li a {
+  font-family: 'OpenSans';
+  font-size: 15px;
+  color: #333b46;
+  font-weight: bold;
+  -webkit-transition: all 0.15s ease-in-out 0.05s;
+  -moz-transition: all 0.15s ease-in-out 0.05s;
+  -o-transition: all 0.15s ease-in-out 0.05s;
+  -ms-transition: all 0.15s ease-in-out 0.05s;
+  transition: all 0.15s ease-in-out 0.05s;
+}
+
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a:focus {
+  color: #e84c3d;
+}
+
+.navbar-default .navbar-nav .active {
+  color: #e84c3d;
+  -webkit-transition: all 0.15s ease-in-out 0.05s;
+  -moz-transition: all 0.15s ease-in-out 0.05s;
+  -o-transition: all 0.15s ease-in-out 0.05s;
+  -ms-transition: all 0.15s ease-in-out 0.05s;
+  transition: all 0.15s ease-in-out 0.05s;
+}
+
+.navbar-default .navbar-nav .active:hover,
+.navbar-default .navbar-nav .active:focus {
+  color: #333b46;
+}
+
+/* mobile version */
+
+.navbar-default .navbar-toggle {
+  border-color: #e84c3d;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #e84c3d;
+}
+
+.home {
+  background-color: pink;
+}
