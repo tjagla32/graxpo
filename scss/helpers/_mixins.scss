@@ -13,3 +13,7 @@
 @mixin transition($duration, $delay: .05s){
     @include prefix(transition, all $duration ease-in-out $delay);
 }
+//-------------------------
+@mixin drop-shadow($x, $y, $r, $color){
+    -webkit-filter: drop-shadow($x $y $r $color);
+}

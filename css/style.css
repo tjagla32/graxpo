@@ -11260,12 +11260,22 @@ button.close {
   src: url("../bower_components/../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url("../bower_components/../fonts/Roboto-Medium.ttf");
+}
+
 * {
   text-transform: uppercase;
 }
 
 p {
   text-transform: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .navbar-default {
@@ -11312,6 +11322,12 @@ p {
   color: #e84c3d;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-default .navbar-nav li a {
+    font-size: 14px;
+  }
+}
+
 .navbar-default .navbar-nav .active {
   color: #e84c3d;
   -webkit-transition: all 0.15s ease-in-out 0.05s;
@@ -11342,5 +11358,55 @@ p {
 }
 
 .home {
-  background-color: pink;
+  background-color: #e1e1e1;
+  height: 100vh;
+  position: relative;
+}
+
+.home .content {
+  font-family: 'RobotoMedium';
+  font-size: 35px;
+  color: #333b46;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.home .content h2 {
+  font-family: 'OpenSans';
+  font-size: 16px;
+  color: #81868e;
+}
+
+.home .decoration {
+  position: absolute;
+}
+
+.home .decoration.head-phones {
+  left: -120px;
+  top: 15%;
+}
+
+.home .decoration.head-phones img {
+  -webkit-filter: drop-shadow(1px 35px 8px #999);
+}
+
+.home .decoration.glasses {
+  left: 12%;
+  top: 55%;
+}
+
+.home .decoration.glasses img {
+  -webkit-filter: drop-shadow(-3px 2px 4px #999);
+  transform: rotate(-15deg);
+}
+
+.home .decoration.pencils {
+  left: 4%;
+  top: 72%;
+}
+
+.home .decoration.pencils img {
+  -webkit-filter: drop-shadow(0px 2px 5px #999);
 }
