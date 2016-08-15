@@ -11278,6 +11278,20 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-30px);
+  }
+
+  30% {
+    transform: translateY(-15px);
+  }
+}
+
 .navbar-default {
   background-color: transparent;
   border: 0px solid #000;
@@ -11303,6 +11317,14 @@ body {
 
 .navbar-default .navbar-nav {
   /* link */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-default .navbar-nav li {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 999;
+  }
 }
 
 .navbar-default .navbar-nav li a {
@@ -11409,4 +11431,47 @@ body {
 
 .home .decoration.pencils img {
   -webkit-filter: drop-shadow(0px 2px 5px #999);
+}
+
+.home .decoration.juice {
+  top: 32%;
+  right: 7%;
+}
+
+.home .decoration.juice img {
+  -webkit-filter: drop-shadow(2px 5px 5px #777);
+}
+
+.home .decoration.pen-holder {
+  top: 52%;
+  right: 4%;
+}
+
+.home .decoration.pen-holder img {
+  -webkit-filter: drop-shadow(10px 35px 15px #999);
+}
+
+.home .decoration.mouse {
+  top: 70%;
+  right: 15%;
+}
+
+.home .decoration.mouse img {
+  -webkit-filter: drop-shadow(10px 15px 10px #999);
+}
+
+.home .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+  color: #e84c3d;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.home .scroll-down img {
+  display: block;
+  margin: 0 auto;
+  animation: bounce 4s infinite;
 }

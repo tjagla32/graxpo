@@ -15,6 +15,11 @@
 
     .navbar-nav{                                   /* link */
         li{
+            @media screen and (max-width: 768px){
+                background-color: rgba(255,255,255, .7);
+                position: relative;
+                z-index: 999;
+            }
             a{
                 font-family: 'OpenSans';
                 font-size: 15px;
