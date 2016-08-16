@@ -1,0 +1,86 @@
+.about{
+    background-color: $section-background;
+    padding: 100px 0;
+
+    .first{
+        text-align: left;
+        &:after{
+            left: 0;
+            transform: translate(0);
+        }
+    }
+
+    .btn-graxpo{
+        @include btn-style();
+        @include transition();
+    }
+
+    img{
+        @media screen and (min-width: 768px){
+            position: relative;
+            left: 50px;
+        }
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        &:hover{
+            opacity: .5;
+            @include transition();
+        }
+    }
+    .row:nth-child(2){
+        margin: 60px -15px;
+        p{
+            text-align: center;
+        }
+    }
+    .panel{
+        border: 1px solid #ccc;
+        color: $text-color;
+        background-color: $section-background;
+        padding: 30px 5px;
+        border-radius: 10px;
+        @include transition();
+        .panel-icon{
+            .circle{
+                border-radius: 50%;
+                background-color: $base-color;
+                color: #fff;
+                height: 100px;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include transition(.3s);
+            }
+            &+div{
+                font-family: 'OpenSans';
+                letter-spacing: 0.5px;
+                line-height: 180%;
+                font-size: 13px;
+                margin-top: 30px;
+                .panel-title{
+                    color: $section-title;
+                    font-family: 'RobotoMedium';
+                    @include transition(.3s);
+                }
+            }
+        }
+        &:hover{
+            background-color: $base-color;
+            color: #fff;
+            border: 1px solid #fff;
+            .panel-icon{
+                .circle{
+                    background-color: #fff;
+                    color: $base-color;
+                }
+                &+div{
+                    .panel-title{
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+    }
+}

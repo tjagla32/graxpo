@@ -4,7 +4,11 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/fonts";
+@import "helpers/animations";
 
 @import "layout/base";
 @import "layout/navbar";
 @import "layout/home";
+@import "layout/about";
+@import "layout/counter";
+@import "layout/three-steps";

@@ -8,16 +8,18 @@ html, body{
     overflow-x: hidden;
 }
 
-
-//-----------------------------------
-@keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
-    transform: translateY(0);
-  }
-	20% {
-    transform: translateY(-30px);
-  }
-	30% {
-    transform: translateY(-15px);
-  }
+.section-title{
+    @include section-header();
+    & + p{
+        font-family: 'OpenSans';
+        font-size: 14px;
+        color: $text-color;
+        letter-spacing: 0.5px;
+        line-height: 170%;
+        text-align: justify;
+    }
+    & + .btn-graxpo{
+        @include btn-style();
+        @include transition();
+    }
 }
