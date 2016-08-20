@@ -39,9 +39,18 @@
     color: $section-title;
     font-weight: 400;
     padding-bottom: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
-    @include border($section-title);
+    @include border(#666);
+}
+//------------------------------------------
+@mixin section-description(){
+  font-family: 'OpenSans';
+  font-size: 14px;
+  color: $text-color;
+  letter-spacing: 0.5px;
+  line-height: 170%;
+  text-align: justify;
 }
 //------------------------------------------
 @mixin btn-style(){

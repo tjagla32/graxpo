@@ -11284,6 +11284,38 @@ button.close {
   }
 }
 
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    -webkit-transform: translate3d(0, 350px, 0);
+    transform: translate3d(0, 350px, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 * {
   text-transform: uppercase;
 }
@@ -11303,14 +11335,14 @@ body {
   color: #333b46;
   font-weight: 400;
   padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   position: relative;
 }
 
 .section-title:after {
   content: "";
-  background: #333b46;
+  background: #666;
   position: absolute;
   bottom: -3px;
   left: 50%;
@@ -11668,4 +11700,157 @@ body {
   font-size: 3em;
   display: inline;
   font-weight: 100;
+}
+
+.three-steps {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+}
+
+.three-steps p {
+  font-family: 'OpenSans';
+  font-size: 14px;
+  color: #81868e;
+  letter-spacing: 0.5px;
+  line-height: 170%;
+  text-align: justify;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.three-steps .row {
+  position: relative;
+}
+
+.three-steps .row .border-line {
+  position: absolute;
+  height: 1px;
+  width: 60%;
+  background-color: #ccc;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+@media (max-width: 767px) {
+  .three-steps .row .border-line {
+    display: none;
+  }
+}
+
+.three-steps .circle {
+  position: relative;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 20px;
+  border: 1px solid #81868e;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.col-sm-4 > .three-steps .circle {
+  display: flex;
+  flex-direction: column;
+}
+
+.three-steps .circle + div {
+  text-align: center;
+}
+
+.three-steps .circle div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 18px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.three-steps .circle div i {
+  color: #e84c3d;
+}
+
+.work {
+  background-color: #f3f3f3;
+  padding: 100px 0;
+}
+
+.work .section-title + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.work .col-sm-4 {
+  min-height: 317px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+
+.work .col-sm-4:nth-child(1) {
+  background-image: url("../bower_components/../img/work-1.jpg");
+}
+
+.work .col-sm-4:nth-child(2) {
+  background-image: url("../bower_components/../img/work-2.jpg");
+}
+
+.work .col-sm-4:nth-child(3) {
+  background-image: url("../bower_components/../img/work-3.jpg");
+}
+
+.work .col-sm-4:hover .overlay {
+  animation: bounceInUp .3s;
+  transform: translateY(0px);
+}
+
+.work .col-sm-4 .overlay {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  background-color: #e84c3d;
+  color: #fff;
+  opacity: .75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(350px);
+}
+
+.work .col-sm-4 .overlay .btn {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.work .col-sm-4 .overlay .btn:hover {
+  opacity: .6;
+}
+
+.service {
+  background-color: #f9f9f9;
+  padding: 100px 0 0;
+}
+
+.service .section-title + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service .desc {
+  background-color: #e84c3d;
 }

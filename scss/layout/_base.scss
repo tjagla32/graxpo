@@ -11,12 +11,7 @@ html, body{
 .section-title{
     @include section-header();
     & + p{
-        font-family: 'OpenSans';
-        font-size: 14px;
-        color: $text-color;
-        letter-spacing: 0.5px;
-        line-height: 170%;
-        text-align: justify;
+        @include section-description();
     }
     & + .btn-graxpo{
         @include btn-style();
