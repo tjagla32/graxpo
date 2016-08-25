@@ -50,7 +50,7 @@
   color: $text-color;
   letter-spacing: 0.5px;
   line-height: 170%;
-  text-align: justify;
+  //text-align: justify;
 }
 //------------------------------------------
 @mixin btn-style(){
@@ -59,6 +59,7 @@
     border-radius: 5px;
     padding: 7px 15px;
     border: 1px solid $base-color;
+    @include transition();
     &:hover{
         color: $base-color;
         background-color: #fff;

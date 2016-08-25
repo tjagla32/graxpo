@@ -9,5 +9,34 @@
   }
   .desc{
     background-color: $base-color;
+    div:nth-child(2){
+      margin-top: 40px;
+      letter-spacing: 3px;
+      line-height: 180%;
+      color: #fff;
+      font-family: 'OpenSans';
+      strong{
+        @include border(#fff, 0);
+        padding-bottom: 20px;
+      }
+      p{
+        margin-top: 35px;
+      }
+    }
+  }
+  .business{
+    background: url(../img/exploor-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    font-family: 'RobotoMedium';
+    color: #fff;
+    h3{
+      font-family: 'RobotoThin';
+    }
+    .btn-graxpo{
+      @include btn-style();
+      padding: 15px 20px;
+    }
   }
 }

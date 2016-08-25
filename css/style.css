@@ -11357,7 +11357,6 @@ body {
   color: #81868e;
   letter-spacing: 0.5px;
   line-height: 170%;
-  text-align: justify;
 }
 
 .section-title + .btn-graxpo {
@@ -11366,6 +11365,11 @@ body {
   border-radius: 5px;
   padding: 7px 15px;
   border: 1px solid #e84c3d;
+  -webkit-transition: all 0.2s ease-in-out 0.05s;
+  -moz-transition: all 0.2s ease-in-out 0.05s;
+  -o-transition: all 0.2s ease-in-out 0.05s;
+  -ms-transition: all 0.2s ease-in-out 0.05s;
+  transition: all 0.2s ease-in-out 0.05s;
   -webkit-transition: all 0.2s ease-in-out 0.05s;
   -moz-transition: all 0.2s ease-in-out 0.05s;
   -o-transition: all 0.2s ease-in-out 0.05s;
@@ -11587,6 +11591,11 @@ body {
   -o-transition: all 0.2s ease-in-out 0.05s;
   -ms-transition: all 0.2s ease-in-out 0.05s;
   transition: all 0.2s ease-in-out 0.05s;
+  -webkit-transition: all 0.2s ease-in-out 0.05s;
+  -moz-transition: all 0.2s ease-in-out 0.05s;
+  -o-transition: all 0.2s ease-in-out 0.05s;
+  -ms-transition: all 0.2s ease-in-out 0.05s;
+  transition: all 0.2s ease-in-out 0.05s;
 }
 
 .about .btn-graxpo:hover {
@@ -11713,7 +11722,6 @@ body {
   color: #81868e;
   letter-spacing: 0.5px;
   line-height: 170%;
-  text-align: justify;
   padding: 20px 0;
   text-align: center;
 }
@@ -11853,4 +11861,95 @@ body {
 
 .service .desc {
   background-color: #e84c3d;
+}
+
+.service .desc div:nth-child(2) {
+  margin-top: 40px;
+  letter-spacing: 3px;
+  line-height: 180%;
+  color: #fff;
+  font-family: 'OpenSans';
+}
+
+.service .desc div:nth-child(2) strong {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.service .desc div:nth-child(2) strong:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 3px;
+  width: 40px;
+  transform: translate(0);
+}
+
+.service .desc div:nth-child(2) p {
+  margin-top: 35px;
+}
+
+.service .business {
+  background: url("../bower_components/../img/exploor-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  font-family: 'RobotoMedium';
+  color: #fff;
+}
+
+.service .business h3 {
+  font-family: 'RobotoThin';
+}
+
+.service .business .btn-graxpo {
+  color: #fff;
+  background-color: #e84c3d;
+  border-radius: 5px;
+  padding: 7px 15px;
+  border: 1px solid #e84c3d;
+  -webkit-transition: all 0.2s ease-in-out 0.05s;
+  -moz-transition: all 0.2s ease-in-out 0.05s;
+  -o-transition: all 0.2s ease-in-out 0.05s;
+  -ms-transition: all 0.2s ease-in-out 0.05s;
+  transition: all 0.2s ease-in-out 0.05s;
+  padding: 15px 20px;
+}
+
+.service .business .btn-graxpo:hover {
+  color: #e84c3d;
+  background-color: #fff;
+}
+
+.portfolio {
+  background: #f3f3f3;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .col-lg-12 {
+  margin-bottom: 80px;
+}
+
+.portfolio .item {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.portfolio .item img {
+  width: 100%;
+}
+
+.portfolio .item .port-overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  background-color: #e84c3d;
+  opacity: .6;
+  color: #fff;
+  transform: translateY(110%);
 }
