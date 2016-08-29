@@ -1,0 +1,38 @@
+.blog{
+  background: $section-background;
+  padding: 100px 0;
+  .section-title{
+    & + p{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+  .blog-post{
+    display: flex;
+    align-items: stretch;
+    .blog-desc{
+      background: $base-color;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      div{
+        span{
+          display: block;
+          @include border(#fff, 0%);
+          margin-bottom: 15px;
+          margin-top: -10px;
+          color: #ccc;
+          font-family: 'RobotoThin';
+          font-size: 12px;
+          padding-bottom: 10px;
+          text-transform: none;
+          letter-spacing: 2px;
+        }
+        p{
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

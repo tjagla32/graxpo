@@ -1,0 +1,32 @@
+.subscribe{
+  background: url(../img/email-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  .section-title{
+    color: #fff;
+    @include border(#fff, 0%);
+    text-align: left;
+  }
+  p{
+    color: #fff;
+  }
+  .form-inline{
+    transform: translate(25%,200%);
+    ::-webkit-input-placeholder{
+      color: #fff;
+    }
+    input, .btn{
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 0px;
+    }
+    .btn{
+      border-left-width: 0px;
+      margin-left: -4px;
+      padding: 7px 15px 6px;
+      text-transform: uppercase;
+    }
+  }
+}

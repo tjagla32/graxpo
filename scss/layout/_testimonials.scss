@@ -1,0 +1,53 @@
+.testimonials{
+  padding: 100px 0;
+  background: url(../img/testimonial-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  .section-title{
+    font-family: 'OpenSans';
+    color: #fff;
+    @include border(#fff, 50%);
+    & + span{
+      color: #fff;
+      text-align: center;
+      display: block;
+      font-size: 18px;
+    }
+  }
+  #carousel-example-generic{
+    margin-top: 50px;
+    position: relative;
+    background-color: rgba(0,0,0,0) !important;
+    .carousel-indicators{
+      position: absolute;
+      top: 110%;
+      li{
+        border-color: $base-color;
+        padding: 6px;
+      }
+      .active{
+        background: $base-color;
+      }
+    }
+    .carousel-inner{
+      .item{
+        img{
+          margin: 0 auto 20px;
+        }
+        div{
+          text-align: center;
+          p{
+            font-style: italic;
+            color: #fff;
+            font-family: 'OpenSans';
+            letter-spacing: 2px;
+            line-height: 180%;
+          }
+          h4{
+            color: $base-color;
+          }
+        }
+      }
+    }
+  }
+}

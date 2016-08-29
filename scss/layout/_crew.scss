@@ -1,0 +1,54 @@
+.crew{
+  padding: 100px 0;
+  background: $section-background;
+  .section-title{
+    margin-bottom: 30px;
+    & + p{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .crew-content{
+    position: relative;
+    overflow: hidden;
+    .crew-overlay{
+      position: absolute;
+      background-color: rgba(232,76,61,.85);
+      color: #fff;
+      left: 5%;
+      right: 5%;
+      bottom: 4%;
+      transform: translateY(130%);
+      font-family: 'RobotoThin';
+      padding: 10px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      line-height: 180%;
+      text-align: center;
+
+      a{
+        color: #fff;
+        i{
+          border: 2px solid #fff;
+          border-radius: 50%;
+          padding: 10px;
+        }
+        &:hover{
+          i{
+            color: #ccc;
+            border-color: #ccc;
+          }
+        }
+      }
+    }
+    &:hover{
+      .crew-overlay{
+        transform: translateY(0%);
+        animation: bounceInUp .3s;
+      }
+    }
+  }
+  .crew-description{
+      text-align: center;
+  }
+}

@@ -7,20 +7,47 @@
   margin: 0;
   .item{
     position: relative;
-    overflow-y: hidden;
-    img{
-      width: 100%;
-    }
+    overflow: hidden;
+    float: left;
+    width: 25%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     .port-overlay{
       position: absolute;
-      top: 5%;
-      bottom: 5%;
-      left: 5%;
-      right: 5%;
-      background-color: $base-color;
-      opacity: .6;
+      top: 50%;
+      bottom: 50%;
+      left: 50%;
+      right: 50%;
+      background-color: rgba(232,76,61,.6);
       color: #fff;
-      transform: translateY(110%);
+      overflow: hidden;
+      @include transition(.3s, 0.0s);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    &:hover{
+      .port-overlay{
+        top: 5%;
+        bottom: 5%;
+        left: 5%;
+        right: 5%;
+      }
     }
   }
+  .port-1{background: url(../img/port-1.jpg);}
+  .port-2{background: url(../img/port-2.jpg);}
+  .port-3{background: url(../img/port-3.jpg);}
+  .port-4{background: url(../img/port-4.jpg);}
+  .port-5{background: url(../img/port-5.jpg);}
+  .port-6{background: url(../img/port-6.jpg);}
+  .port-7{background: url(../img/port-13.jpg);}
+  .port-8{background: url(../img/port-8.jpg);}
+  .port-9{background: url(../img/port-9.jpg);}
+  .port-10{background: url(../img/port-10.jpg);}
+  .port-11{background: url(../img/port-11.jpg);}
+  .port-12{background: url(../img/port-12.jpg);}
 }
