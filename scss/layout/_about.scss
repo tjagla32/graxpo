@@ -40,7 +40,18 @@
         padding: 30px 5px;
         border-radius: 10px;
         @include transition();
+        .panel-body{
+            display: flex;
+            align-items: center;
+            .col-xs-9{
+                margin: 0;
+                padding: 0;
+            }
+        }
         .panel-icon{
+            @media screen and (max-width: 575px) {
+                display: none;
+            }
             .circle{
                 border-radius: 50%;
                 background-color: $base-color;

@@ -5,15 +5,16 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
-		replace = require('gulp-replace');
+	replace = require('gulp-replace');
 
 gulp.task('sass', function(){
 		gulp.src(['bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss',
     'bower_components/font-awesome/scss/font-awesome.scss',
+    'bower_components/animate.css/animate.css',
     'scss/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('style.css'))
-		.pipe(replace('../../..', '../bower_components')) //zasrane gówno, które nadpisywało ścieżki do fontów
+	.pipe(replace('../../..', '../bower_components')) //zasrane gówno, które nadpisywało ścieżki do fontów
     .pipe(gulp.dest('css'))
     .pipe(uglifycss())
     .pipe(rename('style.min.css'))
@@ -22,6 +23,7 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
     gulp.src(['bower_components/jquery/dist/jquery.js',
               'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+              'js/scripts/wow.min.js',
               'js/scripts/script.js'])
               .pipe(concat('main.js'))
               .pipe(uglify())
@@ -33,9 +35,9 @@ gulp.task('index', function(){
 
 gulp.task('watch', function(){
 	  gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('scss/**/*.sass', ['sass']);
+      gulp.watch('scss/**/*.sass', ['sass']);
 	  gulp.watch('js/scripts/script.js', ['scripts']);
-    gulp.watch('index.html', ['index']);
+      gulp.watch('index.html', ['index']);
 });
 
-gulp.task('default', ['sass', 'watch', 'scripts']);
+gulp.task('default', ['sass', 'scripts', 'watch']);

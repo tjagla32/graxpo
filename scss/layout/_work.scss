@@ -19,7 +19,7 @@
     &:nth-child(3){background-image: url('../img/work-3.jpg');}
     &:hover{
       .overlay{
-        animation: bounceInUp .3s;
+        animation: bounceInUp .5s;
         transform: translateY(0px);
       }
     }

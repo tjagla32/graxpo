@@ -1,10 +1,23 @@
 .portfolio{
   background: $section-background;
-  .col-lg-12{
-    margin-bottom: 80px;
-  }
   padding: 0;
   margin: 0;
+  .col-lg-12{
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  .breadcrumb{
+      li{
+          a{
+              text-decoration: none;
+              color: $text-color;
+              @include transition();
+              &:hover{
+                  color: #000;
+              }
+          }
+      }
+  }
   .item{
     position: relative;
     overflow: hidden;
