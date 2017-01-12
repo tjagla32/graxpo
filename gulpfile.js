@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+﻿var gulp = require('gulp'),
     sass = require('gulp-sass'),
     uglifycss = require('gulp-uglifycss')
     uglify = require('gulp-uglify')
@@ -14,7 +14,7 @@ gulp.task('sass', function(){
     'scss/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('style.css'))
-	.pipe(replace('../../..', '../bower_components')) //zasrane gówno, które nadpisywało ścieżki do fontów
+	.pipe(replace('../../..', '../bower_components'))
     .pipe(gulp.dest('css'))
     .pipe(uglifycss())
     .pipe(rename('style.min.css'))
